@@ -1,0 +1,99 @@
+.conteudo-quem-somos,
+.conteudo-objetivo {
+  display: flex;
+  /* lado a lado */
+  align-items: center;
+  /* centraliza verticalmente */
+  justify-content: center;
+  gap: 40px;
+  /* espaço entre imagem e texto */
+  padding: 60px 40px;
+  background-color: #0f172a;
+  /* fundo escuro */
+}
+
+/* Imagem à esquerda */
+.intro-imagem {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  /* bordas arredondadas */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  /* sombra elegante */
+  object-fit: cover;
+  /* ajusta sem distorcer */
+}
+
+/* Texto à direita */
+.intro-texto,
+.content {
+  flex: 1 1 500px;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.intro-texto h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  color: #00ff6a;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px black;
+  margin: 2rem 0 1rem 0;
+  /* Menos espaço entre título e texto */
+}
+
+.intro-texto p {
+  font-size: clamp(16px, 4vw, 18px);
+  /* Responsivo e mais compacto */
+  line-height: 1.6;
+  color: #f1f5f9;
+  margin: 0 0 20px 0;
+  /* Reduz espaço entre parágrafos */
+  text-align: left;
+  word-break: break-word;
+}
+
+/* 📱 Ajuste para telas pequenas */
+@media (max-width: 600px) {
+  .intro-texto {
+    padding: 0 15px;
+  }
+
+  .intro-texto h1 {
+    font-size: 32px;
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .intro-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .conteudo-quem-somos {
+    flex-direction: column;
+    /* imagem em cima, texto embaixo */
+    text-align: center;
+  }
+
+  .intro-imagem,
+  .intro-texto {
+    flex: 1 1 100%;
+  }
+
+  .intro-imagem img {
+    max-width: 90%;
+  }
+}

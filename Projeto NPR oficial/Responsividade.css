@@ -1,0 +1,98 @@
+/* ============================= */
+/* MENU MOBILE TELA CHEIA */
+/* ============================= */
+
+.btn-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Container do menu em tela cheia */
+.menu-fullscreen {
+  position: fixed;
+  inset: 0;
+  background-color: #0f172a;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Lista centralizada */
+.menu-fullscreen ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.menu-fullscreen li a {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu-fullscreen li a:hover {
+  color: #00ff6a;
+}
+
+/* ============================= */
+/* CONTROLE MOBILE / DESKTOP */
+/* ============================= */
+
+.dropdown-responsive {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-list {
+    display: none;
+  }
+
+  .dropdown-responsive {
+    display: block;
+  }
+}
+
+/* ============================= */
+/* SEÇÕES PRINCIPAIS RESPONSIVAS */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .conteudo-quem-somos,
+  .conteudo-objetivo {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .intro-imagem img {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .intro-texto h1 {
+    font-size: 26px;
+  }
+
+  .intro-texto p {
+    font-size: 16px;
+  }
+}
+
+/* ============================= */
+/* CELULAR PEQUENO */
+/* ============================= */
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 16px;
+  }
+
+  .intro-texto p {
+    font-size: 15px;
+  }
+}
